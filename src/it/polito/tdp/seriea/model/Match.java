@@ -41,6 +41,26 @@ public class Match {
 		this.ftr = ftr;
 	}
 
+	public Match(int id, Season season, Team home, Team away, int goalHome, int goalAway, String result) {
+		this.id = id;
+		this.season = season;
+		this.homeTeam = home;
+		this.awayTeam = away;
+		this.fthg = goalHome;
+		this.ftag = goalAway;
+		this.ftr = result;
+	}
+	
+	public Match(int id, Season season, Team homeTeam, Team awayTeam, String ftr) {
+		super();
+		this.id = id;
+		this.season = season;
+		this.homeTeam = homeTeam;
+		this.awayTeam = awayTeam;
+		this.ftr = ftr;
+	}
+
+
 	/**
 	 * @return the id
 	 */

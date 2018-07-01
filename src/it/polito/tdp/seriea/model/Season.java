@@ -1,13 +1,35 @@
 package it.polito.tdp.seriea.model;
 
 public class Season {
+	
 	private int season;
 	private String description;
+	private int punti; //punti della squadra selezionata
+	
+	private int annataDoro;
+	
 
 	public Season(int season, String description) {
 		super();
 		this.season = season;
 		this.description = description;
+		punti=0;
+	}
+
+	public int getPunti() {
+		return punti;
+	}
+
+	public void AddPunti(int punti) {
+		this.punti += punti;
+	}
+	
+	public void setAnnataDoro(int massimo) {
+		this.annataDoro=massimo;
+	}
+	
+	public int getAnnataDoro() {
+		return this.annataDoro;
 	}
 
 	/**
@@ -79,7 +101,8 @@ public class Season {
 	 */
 	@Override
 	public String toString() {
-		return description;
+		return description +" punti:"+punti;
 	}
+
 
 }
